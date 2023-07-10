@@ -25,5 +25,6 @@ confirmed with a message, and logged in the database.
   Database: Lambda/Python + DynamoDB
   Email delivery: Lambda/Python + SNS Topic
   AWS allows sending messages only to subscribers (the administrator) by default, so the message for the user will be sent using Python.
-  File attachments: API + S3 - I would like the file to be transferred to an S3 bucket 	with a predefined name, e.g., "file.pdf."
+  
+File attachments: API + S3 - I would like the file to be transferred to an S3 bucket 	with a predefined name, e.g., "file.pdf."
   File verification: Lambda/Python - the file will be searched for specified records, 	and after displaying the result, it will be deleted.
