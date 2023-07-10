@@ -19,7 +19,7 @@ Homepage
 
 Services and Technologies:
 
-	Form: HTML/JS + API Gateway
+Form: HTML/JS + API Gateway
 	Database: Lambda/Python + DynamoDB
 	Email delivery: Lambda/Python + SNS Topic
 		AWS allows sending messages only to subscribers (the administrator) by default, so the message for the user will be sent using Python.
