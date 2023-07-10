@@ -19,5 +19,5 @@ If the searched text fragment is found, a notification will be displayed,
 confirmed with a message, and logged in the database.
 
 3. Services and Technologies
-Form: HTML/JS + API Gateway
-Database: Lambda/Python + DynamoDB
+Form - HTML/JS + API Gateway
+Database - Lambda/Python + DynamoDB
