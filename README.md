@@ -22,8 +22,9 @@ confirmed with a message, and logged in the database.
 3. Services and Technologies
 
   Form: HTML/JS + API Gateway
-  Database: Lambda/Python + DynamoDB
-  Email delivery: Lambda/Python + SNS Topic
+Database: Lambda/Python + DynamoDB
+  
+Email delivery: Lambda/Python + SNS Topic
   AWS allows sending messages only to subscribers (the administrator) by default, so the message for the user will be sent using Python.
   
 File attachments: API + S3 - I would like the file to be transferred to an S3 bucket 	with a predefined name, e.g., "file.pdf."
