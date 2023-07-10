@@ -21,7 +21,8 @@ confirmed with a message, and logged in the database.
 
 3. Services and Technologies
 
-  Form: HTML/JS + API Gateway
+Form: HTML/JS + API Gateway
+
 Database: Lambda/Python + DynamoDB
   
 Email delivery: Lambda/Python + SNS Topic
