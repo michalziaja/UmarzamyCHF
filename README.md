@@ -35,4 +35,5 @@ File verification: Lambda/Python - the file will be searched for specified recor
 EDIT: 
 What i have already?
 Contact form works and Lambda correctly save data into DynamoDB
+
 Emails are send from my gmail accout -> i will set up SNS leater
