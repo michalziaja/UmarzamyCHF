@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+
+  <title>UMARZAMY KREDYTY WE FRANKACH</title>
+  <style>
+    body {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #2e2d2d;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #ffff;
+      text-align: center;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"], input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    input[type="submit"] {
+      background-color: #333;
+      color: #ffff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>UMARZAMY CHF</h1>
+  </header>
+
+  <div class="content">
+    <h2>Jak możemy Ci pomóc z umorzeniem kredytu hipotecznego w CHF?</h2>
+    <p>Oto kilka sposobów, w jakie możemy Ci pomóc:</p>
+    <ul>
+      <li>Szczegółowa analiza Twojej sytuacji finansowej</li>
+      <li>Negocjacje z bankiem w sprawie zmiany warunków kredytu</li>
+      <li>Przygotowanie planu spłaty i restrukturyzacji</li>
+    </ul>
+
+    <form id="contact-form">
+      <label for="przedrostek">Przedrostek:</label>
+      <select id="przedrostek" name="przedrostek">
+        <option value="Pan">Pan</option>
+        <option value="Pani">Pani</option>
+      </select><br>
+
+      <input type="text" id="imie" placeholder="Imię" required><br>
+      <input type="text" id="nazwisko" placeholder="Nazwisko" required><br>
+      <input type="email" id="email" placeholder="Adres Email" required><br>
+      <input type="tel" id="telefon" placeholder="Telefon" required><br>
+      
+      <input type="submit" value="Wyślij formularz">
+    </form>
+
+    <h3>Prześlij plik PDF:</h3>
+    <h2>Wyślij swoją umowę, a nasz automat sprawdzi czy bank zastosował w nich niedozwolone klauzule</h2>
+    <form >
+      <input type="file" accept=".pdf" name="file" required>
+      <div class="button-container">
+        <input type="submit" value="Załącz umowę"><br>
+        <div><input type="submit" value="Wyślij do analizy"></div>
+  </div>
+</form>
+  </div>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Zapobieganie domyślnej akcji przesłania formularza
+
+      var przedrostek = document.getElementById('przedrostek').value;
+      var imie = document.getElementById('imie').value;
+      var nazwisko = document.getElementById('nazwisko').value;
+      var email = document.getElementById('email').value;
+      var telefon = document.getElementById('telefon').value;
+
+      var data = {
+        'przedrostek': przedrostek,
+        'imie': imie,
+        'nazwisko': nazwisko,
+        'email': email,
+        'telefon': telefon
+      };
+
+      fetch('xxxAPI-POSTxxx', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(function(response) {
+        if (response.ok) {
+          alert("Dane zostały zapisane.");
+          document.getElementById('imie').value = "";
+          document.getElementById('nazwisko').value = "";
+          document.getElementById('email').value = "";
+          document.getElementById('telefon').value = "";
+        } else {
+          alert("Wystąpił błąd. Spróbuj ponownie.");
+        }
+      })
+      .catch(function(error) {
+        console.log('Wystąpił błąd:', error.message);
+        alert("Wystąpił błąd. Spróbuj ponownie.");
+      });
+    });
+  </script>
+
+
+</body>
+</html>
