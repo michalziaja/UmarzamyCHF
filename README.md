@@ -37,3 +37,9 @@ What i have already?
 Contact form works and Lambda correctly save data into DynamoDB
 
 Emails are send from my gmail accout -> i will set up SNS leater
+
+PROBLEMS FOR NOW:
+1. I stuck on uploading file to S3 by API - i have CORS error..
+2. I made simple text search code in python, but when i try use pharse from text.txt file, code is searching only from one line.
+
+
