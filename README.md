@@ -31,3 +31,8 @@ Email delivery: Lambda/Python + SNS Topic
 File attachments: API + S3 - I would like the file to be transferred to an S3 bucket 	with a predefined name, e.g., "file.pdf."
 
 File verification: Lambda/Python - the file will be searched for specified records, 	and after displaying the result, it will be deleted.
+
+EDIT: 
+What i have already?
+Contact form works and Lambda correctly save data into DynamoDB
+Emails are send from my gmail accout -> i will set up SNS leater
