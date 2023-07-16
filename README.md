@@ -42,4 +42,8 @@ PROBLEMS FOR NOW:
 1. I stuck on uploading file to S3 by API - i have CORS error..
 2. I made simple text search code in python, but when i try use pharse from text.txt file, code is searching only from one line.
 
+EDIT: 
+1. Foud solution how to upload file to s3. Insted of ulopad directly PUT method by API REST i use presignURL and HTTP API
+https://aws.amazon.com/blogs/compute/uploading-to-amazon-s3-directly-from-a-web-or-mobile-application/
+2. I add layer to my lambda function, so i can use PyPDF2 libraly to search PDF file. 
 
