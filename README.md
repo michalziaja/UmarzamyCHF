@@ -47,3 +47,5 @@ EDIT:
 https://aws.amazon.com/blogs/compute/uploading-to-amazon-s3-directly-from-a-web-or-mobile-application/
 2. I add layer to my lambda function, so i can use PyPDF2 libraly to search PDF file. 
 
+PROBLEMS FOR NOW: 
+1. I need to merge my html with contact form and with upload&search file, i have there diffirent API 
