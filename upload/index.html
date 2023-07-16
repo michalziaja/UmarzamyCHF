@@ -12,20 +12,19 @@
 
       <div v-if="!pdf">
         <h2>SPRAWDŹ SWOJĄ UMOWĘ KREDYTOWĄ</h2>
+        <br><br>
         <input type="file" @change="onFileChange" accept="application/pdf">
       </div>
-      <div v-else>
+      <div v-else><br><br>
         <button v-if="!uploadURL" @click="uploadPDF">Załącz umowę</button>
       </div>
       <h2 v-if="uploadURL">Poprawnie załączono plik</h2>
       <div v-if="result !== ''" :class="result === 'Klauzula abuzywna znaleziona.' ? 'result-box-green' : 'result-box-red'">{{ result }}</div>
       <br>
       <button v-if="result !== ''" @click="refreshPage">Odśwież</button>
-      <br><br>
-      <button v-if="uploadURL" @click="checkResult">Sprawdź umowę</button>
       <br>
-     
-
+      <button v-if="uploadURL && result === ''" @click="checkResult">Sprawdź umowę</button>
+      <br>
     </div>
 
     <script>
