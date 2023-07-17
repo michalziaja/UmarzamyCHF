@@ -12,7 +12,7 @@ def send_email(sender, recipient, subject, message):
     smtp_server = 'smtp.gmail.com'
     smtp_port = 587
     smtp_username = 'michalziaja88'
-    smtp_password = 'qgumxyqofltqbhze'
+    smtp_password = 'xxxxxxxxxxx'
 
         
     # Create email
